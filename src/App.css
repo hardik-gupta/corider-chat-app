@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap');
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Mulish';
+}
+
+.chat-app{
+    display: flex;
+    flex-direction: column;
+    max-height: 100dvh;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+ 
+::-webkit-scrollbar:hover {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.0);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.1); 
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(0,0,0,0.4); 
+}
+
+.trip-data{
+    width: auto;
+    background: #FAF9F4;
+    display: flex;
+    flex: 1;
+    padding: 20px 16px 16px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    border-bottom: 1px solid #E5E5E0;
+}
+
+.trip-name{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    align-self: stretch;
+}
+
+.trip-name div{
+    flex: 1 0 0;
+    color: #141E0D;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.trip-info{
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+    gap: 12px;
+}
+
+.trip-info img{
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+}
+
+.trip-from-to{
+    flex: 1 0 0;
+}
+
+.trip-from-to p{
+    color: #606060;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0;
+}
+
+.trip-from-to span{
+    color: #141E0D;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.chat-window{
+    width: auto;
+    overflow-y: scroll;
+    background-color: #FAF9F4;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+}
+
+.message-container{
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 10px 40px 10px 16px;
+    margin: 0;
+}
+
+.image-container{
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.sender-image{
+    display: flex;
+    width: 24px;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 50%;
+}
+
+.user-verified{
+    position: absolute;
+}
+
+.message-text{
+    display: flex;
+    padding: 8px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    border-radius: 0px 12px 12px 12px;
+    background: #FFF;
+    color: #606060;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.08);
+    position: relative;
+}
+
+.message-time
+{
+    color: #606060;
+    font-size: 12px;
+}
+
+.send-message-container{
+    display: flex;
+    flex: 1;
+    width: auto;
+    padding: 8px 16px;
+    align-items: center;
+    background: #FAF9F4;
+}
+
+.send-message-wrapper{
+    display: flex;
+    padding: 11px 12px;
+    align-items: center;
+    gap: 16px;
+    flex: 1 0 0;
+    border-radius: 8px;
+    background: #FFF;
+}
+
+.send-message-text{
+    background: #FFF;
+    border: none;
+    flex: 1 0 0;
+    padding: 0;
+    color: #606060;
+}
+
+.send-message-text:focus{
+    outline: #FFFFFF00;
+}
+
+.attachments-container{
+  position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.attachments{
+  display: none
+}
+
+.attachments-show{
+  display: flex;
+  position: absolute;
+  padding: 12px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  border-radius: 999px;
+  background: #008000;
+  box-shadow: 0px -1px 8px 0px rgba(0, 0, 0, 0.05);
+  margin-bottom: 100px;
+}
+
+.self{
+    padding: 10px 20px 10px 68px;
+    margin: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.self .sender-image{
+    display: none;
+}
+
+.self .user-verified{
+    display: none;
+}
+
+.self .message-text{
+    color: #FFF;
+    display: flex;
+    border: none;    
+    padding: 8px;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.08);
+    border-radius: 12px 12px 0px 12px;
+    background-color: #1C63D5;
+}
+
+.self .message-time{
+    color: #FFF;
+}
