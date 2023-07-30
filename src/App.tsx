@@ -49,9 +49,6 @@ function App() {
         setCurrentTripChat(tripData.chats)      
         containerHeight = listContainerRef.current?.scrollHeight
         // console.log(data.chats[0]);
-        // console.log(data.chats[0].id)
-        // console.log(data.chats[0].time)
-        // console.log(data.chats[0].sender.user_id);
       })
     })
   }
